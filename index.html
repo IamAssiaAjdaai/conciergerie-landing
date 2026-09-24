@@ -424,10 +424,54 @@
 
     @media (max-width: 640px) {
       .container { width: min(100% - 22px, 1120px); }
-      .nav { min-height: 64px; }
-      .brand span:last-child { display: none; }
-      .nav-actions .btn-outline { display: none; }
-      .hero { padding: 52px 0 38px; }
+
+      /* Mobile header: keep it clean and compact */
+      .nav {
+        min-height: 64px;
+        gap: 10px;
+      }
+
+      .brand {
+        flex: 0 0 auto;
+      }
+
+      .brand-copy {
+        display: none;
+      }
+
+      .brand-mark {
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+      }
+
+      .brand-mark svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      .nav-actions {
+        flex: 1;
+        min-width: 0;
+        justify-content: flex-end;
+        gap: 0;
+      }
+
+      /* WhatsApp remains available in the hero + floating button */
+      .nav-actions .btn-whatsapp {
+        display: none;
+      }
+
+      .nav-actions .btn-primary {
+        min-height: 42px;
+        padding: 10px 13px;
+        border-radius: 12px;
+        font-size: 14px;
+        line-height: 1.15;
+        white-space: nowrap;
+      }
+
+      .hero { padding: 46px 0 38px; }
       .features, .steps, .grid-2, .faq { grid-template-columns: 1fr; }
       .hero-card { min-height: 360px; border-radius: 24px; padding: 20px; }
       section { padding: 54px 0; }
